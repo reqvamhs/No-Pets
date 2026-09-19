@@ -41,10 +41,9 @@ namespace HsNoPets
     }
 
     /// <summary>
-    /// In-game pets: PetControllerBoard.CreatePetObject honors the game's own creation
-    /// blocker (IsCreationBlocked) as its first check, so forcing the getter to true makes
-    /// every creation attempt a clean no-op; the corner platform is a separate corner-spell
-    /// replacement driven by per-side contexts, zeroed before application.
+    /// Pet creation honors the game's own IsCreationBlocked as its first check, so forcing
+    /// the getter true makes it a clean no-op. The corner platform is a separate per-side
+    /// corner-spell replacement, zeroed before application.
     /// </summary>
     public static class PetPatches
     {
